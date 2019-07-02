@@ -401,7 +401,7 @@
                 <div class="card-body">
 
                     <!-- Form -->
-                    <form name="uploadtxtfile" method="post" enctype="multipart/form-data">
+                    <form name="uploadFileForm" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <!-- File Upload -->
                         <div class="w-50 container-fluid">
@@ -417,49 +417,71 @@
                         </div>
                         <!-- /File Upload -->
                         <!-- Configuration -->
-                        <!-- Content -->
-                        <div class="container">
+                        <div class="container mt-5">
 
-                            <!--Grid row-->
+                            <!--First row-->
                             <div class="row wow fadeIn">
 
-                                <!--Grid column-->
-                                <div class="col-md-6 mb-4 white-text text-center text-md-left">
+                                <!--First column-->
+                                <div class="col-md-4 mb-4 text-center text-md-left">
                                     <!-- Author Field -->
                                     <label for="authorName">Author</label>
-                                    <input type="text" id="authorName" class="form-control mb-4" placeholder="All">
+                                    <input type="text" id="authorName" class="form-control mb-4" placeholder="All" name="authorName">
                                     <!-- /Author Field -->
                                 </div>
-                                <!-- Shape Field -->
-                                <label for="shapeSelect">Shape Type</label>
-                                <select name="shapeType" class="custom-select" id="shapeSelect">
-                            <option value="rectangle">Rectangle</option>
-                            <option value="round rectangle">Round Rectangle</option>
-                            <option value="curved ribbon">Curved Ribbon</option>
-                            </select>
-                                <!-- /Shape Field -->
-                                <!-- Font Field -->
-                                <label for="fontSize">Font Size</label>
-                                <input type="text" id="fontSize" class="form-control mb-4" placeholder="28">
-                                <!-- /Font Field -->
-                                <!-- Left Field -->
-                                <label for="Left">Left</label>
-                                <input type="text" id="Left" class="form-control mb-4" placeholder="0.5">
-                                <!-- /Left Field -->
-                                <!-- Top Field -->
-                                <label for="Top">Top</label>
-                                <input type="text" id="Top" class="form-control mb-4" placeholder="0.40">
-                                <!-- /Top Field -->
-                                <!-- Height Field -->
-                                <label for="Height">Height</label>
-                                <input type="text" id="Height" class="form-control mb-4" placeholder="9.0">
-                                <!-- /Height Field -->
-                                <!-- Width Field -->
-                                <label for="Width">Width</label>
-                                <input type="text" id="Width" class="form-control mb-4" placeholder="6.60">
-                                <!-- /Width Field -->
+                                <!--Second column-->
+                                <div class="col-md-4 mb-4 text-center text-md-left">
+                                    <!-- Shape Field -->
+                                    <label for="shapeSelect">Shape Type</label>
+                                    <select name="shapeType" class="custom-select" id="shapeSelect">
+                                            <option value="rectangle">Rectangle</option>
+                                            <option value="round rectangle">Round Rectangle</option>
+                                            <option value="curved ribbon">Curved Ribbon</option>
+                                            </select>
+                                    <!-- /Shape Field -->
+                                </div>
+                                <!--Third column-->
+                                <div class="col-md-4 mb-4 text-center text-md-left">
+                                    <!-- Font Field -->
+                                    <label for="fontSize">Font Size</label>
+                                    <input type="text" id="fontSize" class="form-control mb-4" placeholder="28" name="fontSize">
+                                    <!-- /Font Field -->
+                                </div>
+                            </div>
+                            <!--/First row-->
+                            <!--Second row-->
+                            <div class="row wow fadeIn">
+                                <!--Firstcolumn-->
+                                <div class="col-md-3 mb-4 text-center text-md-left">
+                                    <!-- Left Field -->
+                                    <label for="Left">Left</label>
+                                    <input type="text" id="Left" class="form-control mb-4" placeholder="0.5" name="Left">
+                                    <!-- /Left Field -->
+                                    <!--Second column-->
+                                </div>
+                                <div class="col-md-3 mb-4 text-center text-md-left">
+                                    <!-- Top Field -->
+                                    <label for="Top">Top</label>
+                                    <input type="text" id="Top" class="form-control mb-4" placeholder="0.40" name="Top">
+                                    <!-- /Top Field -->
+                                </div>
+                                <!--Third column-->
+                                <div class="col-md-3 mb-4 text-center text-md-left">
+                                    <!-- Height Field -->
+                                    <label for="Height">Height</label>
+                                    <input type="text" id="Height" class="form-control mb-4" placeholder="9.0" name="Height">
+                                    <!-- /Height Field -->
+                                </div>
+                                <!--Fourth column-->
+                                <div class="col-md-3 mb-4 text-center text-md-left">
+                                    <!-- Width Field -->
+                                    <label for="Width">Width</label>
+                                    <input type="text" id="Width" class="form-control mb-4" placeholder="6.60" name="Width">
+                                    <!-- /Width Field -->
+                                </div>
                                 <!-- /Configuration -->
                             </div>
+                            <!--/Second row-->
                         </div>
                         <div class="text-center">
                             <button class="btn btn-indigo" type="submit">Convert</button>
