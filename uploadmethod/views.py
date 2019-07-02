@@ -15,6 +15,12 @@ def uploadtxtfiles(request):
         form = uploadFileForm(request.POST, request.FILES)
         doc = request.FILES['document']
         shape = form.data['shapeType']
+        authorName = form.data['authorName']
+        fontSize = form.data['fontSize']
+        Left = form.data['Left']
+        Top = form.data['Top']
+        Height = form.data['Height']
+        Width = form.data['Width']
         filestorage = FileSystemStorage()
         filename = filestorage.save(doc.name,doc)
         name = filename+".pptx"
@@ -23,6 +29,12 @@ def uploadtxtfiles(request):
         out_path = os.path.join(settings.MEDIA_ROOT,filename+".pptx") #combine the directory with file
         TextToPPTLibrary_class = TextToPPTOrchestrator()
         TextToPPTLibrary_class.SetShapeType(shape)
+        TextToPPTLibrary_class.SetMessageAuthor(authorName)
+        TextToPPTLibrary_class.SetFontSize(fontSize)
+        TextToPPTLibrary_class.SetShapeLeft(Left)
+        TextToPPTLibrary_class.SetShapeTop(Top)
+        TextToPPTLibrary_class.SetShapeHeight(Height)
+        TextToPPTLibrary_class.SetShapeWidth(Width)
         TextToPPTLibrary_class.ConvertTextFileToPPT(in_path,out_path)
         if os.path.exists(file_path):
             with open(file_path,'rb') as file:
