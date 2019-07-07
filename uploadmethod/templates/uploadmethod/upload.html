@@ -53,11 +53,20 @@
         }
         
         .textfontcolor {
-            color: #FFDF4C;
+            color: #FFDF4C !important;
+            ;
         }
         
         .iconcolor {
-            color: #282C33;
+            color: #282C33 !important;
+        }
+        
+        .buttoncolor {
+            background-color: #271F30 !important;
+        }
+        
+        .w-125 {
+            width: 125%
         }
     </style>
 </head>
@@ -421,84 +430,202 @@
 
                             <!--First row-->
                             <div class="row wow fadeIn">
-
                                 <!--First column-->
-                                <div class="col-md-4 mb-4 text-center text-md-left">
-                                    <!-- Author Field -->
-                                    <label for="authorName">Author</label>
-                                    <input type="text" id="authorName" class="form-control mb-4" placeholder="All" name="authorName" required>
-                                    <!-- /Author Field -->
-                                </div>
-                                <!--Second column-->
-                                <div class="col-md-4 mb-4 text-center text-md-left">
-                                    <!-- Shape Field -->
-                                    <label for="shapeSelect">Shape Type</label>
-                                    <select name="shapeType" class="custom-select" id="shapeSelect">
-                                            <option value="rectangle">Rectangle</option>
-                                            <option value="round rectangle" selected>Round Rectangle</option>
-                                            <option value="curved ribbon">Curved Ribbon</option>
-                                            </select>
-                                    <!-- /Shape Field -->
-                                </div>
-                                <!--Third column-->
-                                <div class="col-md-4 mb-4 text-center text-md-left">
-                                    <!-- Font Field -->
-                                    <label for="fontSize">Font Size</label>
-                                    <input type="text" id="fontSize" class="form-control mb-4" placeholder="28" name="fontSize" required>
-                                    <!-- /Font Field -->
+                                <div class="col-md-12 mb-4 text-center text-md-center">
+                                    <!--/Modal-->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary buttoncolor" data-toggle="modal" data-target="#centralModalInfo" id="templateSelector">
+                                   Select Template
+                                    </button>
+                                    <!-- Central Modal Medium Info -->
+                                    <div class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+                                            <!--Content-->
+                                            <div class="modal-content">
+                                                <!--Header-->
+                                                <div class="modal-header">
+                                                    <p class="heading lead">Templates</p>
+
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                                </button>
+                                                </div>
+
+                                                <!--Body-->
+                                                <div class="modal-body">
+                                                    <!--First row-->
+                                                    <div class="row wow fadeIn">
+                                                        <!--First column-->
+                                                        <div class="col-md-4 mb-4 text-center text-md-left">
+                                                            <!-- Card -->
+                                                            <div class="card">
+                                                                <!-- Card image -->
+                                                                <div class="view overlay">
+                                                                    <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/roundRectangle_VVCYt4On5.PNG" alt="Card image cap">
+                                                                    <a href="#!">
+                                                                        <div class="mask rgba-white-slight"></div>
+                                                                    </a>
+                                                                </div>
+
+                                                                <!-- Card content -->
+                                                                <div class="card-body text-center">
+
+                                                                    <!-- Title -->
+                                                                    <h4 class="card-title">Round Rectangle</h4>
+                                                                    <!-- Text -->
+                                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                                    <!-- Button -->
+                                                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="changeSpecificationFunc()" id="roundRectangleButton">Select</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Card -->
+                                                        </div>
+                                                        <!--/.First Column-->
+                                                        <!--Second column-->
+                                                        <div class="col-md-4 mb-4 text-center text-md-left">
+                                                            <!-- Card -->
+                                                            <div class="card">
+                                                                <!-- Card image -->
+                                                                <div class="view overlay">
+                                                                    <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/curvedRibbon_HYVStiwJq4.PNG" alt="Card image cap">
+                                                                    <a href="#!">
+                                                                        <div class="mask rgba-white-slight"></div>
+                                                                    </a>
+                                                                </div>
+
+                                                                <!-- Card content -->
+                                                                <div class="card-body text-center">
+
+                                                                    <!-- Title -->
+                                                                    <h4 class="card-title">Curved Ribbon</h4>
+                                                                    <!-- Text -->
+                                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                                    <!-- Button -->
+                                                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="changeSpecificationFunc()" id="curvedRibbonButton">Select</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Card -->
+                                                        </div>
+                                                        <!--/.Second Column-->
+                                                        <!--Third column-->
+                                                        <div class="col-md-4 mb-4 text-center text-md-left">
+                                                            <!-- Card -->
+                                                            <div class="card">
+                                                                <!-- Card image -->
+                                                                <div class="view overlay">
+                                                                    <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/rectangle_SdAhv9XDN.PNG" alt="Card image cap">
+                                                                    <a href="#!">
+                                                                        <div class="mask rgba-white-slight"></div>
+                                                                    </a>
+                                                                </div>
+
+                                                                <!-- Card content -->
+                                                                <div class="card-body text-center">
+
+                                                                    <!-- Title -->
+                                                                    <h4 class="card-title">Rectangle</h4>
+                                                                    <!-- Text -->
+                                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                                    <!-- Button -->
+                                                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="changeSpecificationFunc()" id="rectangleButton">Select</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Card -->
+                                                        </div>
+                                                        <!--/.Third Column-->
+                                                    </div>
+                                                    <!--/.First Row-->
+                                                </div>
+                                                <!--/.Body-->
+                                            </div>
+                                            <!--/.Content-->
+                                        </div>
+                                    </div>
+                                    <!-- Central Modal Medium Info-->
+                                    <!--/Modal-->
                                 </div>
                             </div>
                             <!--/First row-->
-                            <!--Second row-->
-                            <div class="row wow fadeIn">
-                                <!--Firstcolumn-->
-                                <div class="col-md-3 mb-4 text-center text-md-left">
-                                    <!-- Left Field -->
-                                    <label for="Left">Left</label>
-                                    <input type="text" id="Left" class="form-control mb-4" placeholder="0.5" name="Left" required>
-                                    <!-- /Left Field -->
+                            <!-- Collapsible element -->
+                            <div class="container" id="hiddenConfig" style="display: none;">
+                                <!--Second row-->
+                                <div class="row wow fadeIn">
+
+                                    <!--First column-->
+                                    <div class="col-md-4 mb-4 text-center text-md-left">
+                                        <!-- Author Field -->
+                                        <label for="authorName">Author</label>
+                                        <input type="text" id="authorName" class="form-control mb-4" name="authorName" required>
+                                        <!-- /Author Field -->
+                                    </div>
                                     <!--Second column-->
+                                    <div class="col-md-4 mb-4 text-center text-md-left">
+                                        <!-- Shape Field -->
+                                        <label for="shapeSelect">Shape Type</label>
+                                        <select name="shapeType" class="custom-select" id="shapeSelect">
+                                            <option value="rectangle">Rectangle</option>
+                                            <option value="round rectangle">Round Rectangle</option>
+                                            <option value="curved ribbon">Curved Ribbon</option>
+                                            </select>
+                                        <!-- /Shape Field -->
+                                    </div>
+                                    <!--Third column-->
+                                    <div class="col-md-4 mb-4 text-center text-md-left">
+                                        <!-- Font Field -->
+                                        <label for="fontSize">Font Size</label>
+                                        <input type="text" id="fontSize" class="form-control mb-4" name="fontSize" required>
+                                        <!-- /Font Field -->
+                                    </div>
                                 </div>
-                                <div class="col-md-3 mb-4 text-center text-md-left">
-                                    <!-- Top Field -->
-                                    <label for="Top">Top</label>
-                                    <input type="text" id="Top" class="form-control mb-4" placeholder="0.40" name="Top" required>
-                                    <!-- /Top Field -->
+                                <!--/Second row-->
+                                <!--Third row-->
+                                <div class="row wow fadeIn">
+                                    <!--Firstcolumn-->
+                                    <div class="col-md-3 mb-4 text-center text-md-left">
+                                        <!-- Left Field -->
+                                        <label for="Left">Left</label>
+                                        <input type="text" id="Left" class="form-control mb-4" name="Left" required>
+                                        <!-- /Left Field -->
+                                        <!--Second column-->
+                                    </div>
+                                    <div class="col-md-3 mb-4 text-center text-md-left">
+                                        <!-- Top Field -->
+                                        <label for="Top">Top</label>
+                                        <input type="text" id="Top" class="form-control mb-4" name="Top" required>
+                                        <!-- /Top Field -->
+                                    </div>
+                                    <!--Third column-->
+                                    <div class="col-md-3 mb-4 text-center text-md-left">
+                                        <!-- Height Field -->
+                                        <label for="Height">Height</label>
+                                        <input type="text" id="Height" class="form-control mb-4" name="Height" required>
+                                        <!-- /Height Field -->
+                                    </div>
+                                    <!--Fourth column-->
+                                    <div class="col-md-3 mb-4 text-center text-md-left">
+                                        <!-- Width Field -->
+                                        <label for="Width">Width</label>
+                                        <input type="text" id="Width" class="form-control mb-4" name="Width" required>
+                                        <!-- /Width Field -->
+                                    </div>
                                 </div>
-                                <!--Third column-->
-                                <div class="col-md-3 mb-4 text-center text-md-left">
-                                    <!-- Height Field -->
-                                    <label for="Height">Height</label>
-                                    <input type="text" id="Height" class="form-control mb-4" placeholder="6.60" name="Height" required>
-                                    <!-- /Height Field -->
-                                </div>
-                                <!--Fourth column-->
-                                <div class="col-md-3 mb-4 text-center text-md-left">
-                                    <!-- Width Field -->
-                                    <label for="Width">Width</label>
-                                    <input type="text" id="Width" class="form-control mb-4" placeholder="9.0" name="Width" required>
-                                    <!-- /Width Field -->
-                                </div>
+                                <!--/Third row-->
                                 <!-- /Configuration -->
                             </div>
-                            <!--/Second row-->
+                            <!-- Collapsible element -->
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-indigo" type="submit">Convert</button>
+                            <button class="btn btn-indigo buttoncolor" type="submit">Convert</button>
                             <hr>
-
                         </div>
-
                     </form>
                     <!-- Form -->
-
                 </div>
-
+                <!--/.Card Content-->
+            </section>
+            <!--Section: Upload Files-->
         </div>
-        <!--/.Card-->
-        </section>
-        </div>
-        <!--Section: Upload Files-->
+        <!--Main Container Div-->
     </main>
     <!--Main layout-->
 
@@ -563,6 +690,49 @@
 
         <script>
             new WOW().init();
+
+            function changeSpecificationFunc() {
+                document.getElementById("authorName").value = "All";
+                document.getElementById("fontSize").value = "28";
+                document.getElementById("Left").value = "0.5";
+                document.getElementById("Top").value = "0.40";
+                document.getElementById("Height").value = "6.60";
+                document.getElementById("Width").value = "9.0";
+            }
+
+            var roundRectangle = document.getElementById("roundRectangleButton");
+            var curvedRibbon = document.getElementById("curvedRibbonButton");
+            var rectangle = document.getElementById("rectangleButton");
+
+            roundRectangle.onclick = function() {
+                changeSpecificationFunc();
+                document.getElementById("shapeSelect").value = "round rectangle";
+                document.getElementById("templateSelector").innerHTML = "Template Selected!";
+                $("#hiddenConfig").slideDown(700);
+                $('html, body').animate({
+                    scrollTop: 1965
+                }, 400);
+            }
+
+            curvedRibbon.onclick = function() {
+                changeSpecificationFunc();
+                document.getElementById("shapeSelect").value = "curved ribbon";
+                document.getElementById("templateSelector").innerHTML = "Template Selected!";
+                $("#hiddenConfig").show(700);
+                $('html, body').animate({
+                    scrollTop: 1965
+                }, 400);
+            }
+
+            rectangle.onclick = function() {
+                changeSpecificationFunc();
+                document.getElementById("shapeSelect").value = "rectangle";
+                document.getElementById("templateSelector").innerHTML = "Template Selected!";
+                $("#hiddenConfig").show(700);
+                $('html, body').animate({
+                    scrollTop: 1960
+                }, 400);
+            }
         </script>
 </body>
 
