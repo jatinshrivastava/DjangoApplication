@@ -4,18 +4,18 @@ from django.conf import settings
 from django.http import HttpResponse,Http404
 from django.core.files.storage import FileSystemStorage
 from .forms import uploadFileForm
-from TextToPPTLibrary.texttoppt.orchestrator import TextToPPTOrchestrator
-#from package.orchestrator import TextToPPTOrchestrator
-
-# Create your views here.
+from TextToPPT.orchestrator import TextToPPTOrchestrator
 
 def uploadtxtfiles(request):
     if request.method == 'POST':
-		# create a form instance and populate it with data from the request:
         form = uploadFileForm(request.POST, request.FILES)
         doc = request.FILES['document']
         shape = form.data['shapeType']
         authorName = form.data['authorName']
+
+        startDate = form.data['startDate']
+        endDate = form.data['endDate']
+
         fontSize = form.data['fontSize']
         Left = form.data['Left']
         Top = form.data['Top']
@@ -30,6 +30,10 @@ def uploadtxtfiles(request):
         TextToPPTLibrary_class = TextToPPTOrchestrator()
         TextToPPTLibrary_class.SetShapeType(shape)
         TextToPPTLibrary_class.SetMessageAuthor(authorName)
+
+        TextToPPTLibrary_class.SetStartDate(startDate)
+        TextToPPTLibrary_class.SetEndDate(endDate)      
+
         TextToPPTLibrary_class.SetFontSize(fontSize)
         TextToPPTLibrary_class.SetShapeLeft(Left)
         TextToPPTLibrary_class.SetShapeTop(Top)
