@@ -3,14 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Text To PPT Converter</title>
+    <!-- Favicon-->
+    <link rel="icon" href="https://ik.imagekit.io/zohf1gdzi/Logo_New_JAp623M741.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.css">
     <!-- Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design for Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/css/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
     <style type="text/css">
         html,
         body,
@@ -196,17 +206,328 @@
         .no_border {
             border: 0;
         }
+        
+        .dev-card {
+            width: 90%;
+        }
+        
+        .developer-stage {
+            margin-left: 0.8%;
+        }
+        /* datepicker css */
+        
+        .ui-datepicker {
+            text-align: center;
+        }
+        
+        .ui-datepicker-trigger {
+            margin: 0 0 0 5px;
+            vertical-align: text-top;
+        }
+        
+        .ui-datepicker {
+            font-family: Open Sans, Arial, sans-serif;
+            margin-top: 0px;
+            padding: 0 !important;
+            border-color: #c5c0c0 !important;
+        }
+        
+        .ui-datepicker {
+            width: 256px;
+        }
+        
+        .openemr-calendar .ui-datepicker {
+            width: 191px;
+        }
+        
+        .ui-datepicker table {
+            width: 256px;
+            table-layout: fixed;
+        }
+        
+        .openemr-calendar .ui-datepicker table {
+            width: 191px;
+            table-layout: fixed;
+        }
+        
+        .ui-datepicker-header {
+            background-color: #ffffff !important;
+            background-image: none !important;
+            border-radius: 0;
+        }
+        
+        .openemr-calendar .ui-datepicker-header {
+            background-color: #ffffff !important;
+            border-width: 1px;
+            border-color: #ffffff;
+            border-style: solid;
+        }
+        
+        .ui-datepicker-title {
+            line-height: 35px !important;
+            margin: 0 10px !important;
+        }
+        
+        .openemr-calendar .ui-datepicker-title {
+            line-height: 20px !important;
+        }
+        
+        .ui-datepicker-prev span {
+            display: none !important;
+        }
+        
+        .ui-datepicker-next {
+            text-align: center;
+        }
+        
+        .ui-datepicker-next span {
+            display: none !important;
+        }
+        
+        .ui-datepicker-prev {
+            background-color: transparent !important;
+            text-emphasis-color: black;
+            background-image: url('https://ik.imagekit.io/zohf1gdzi/prev_Fryl7Xrnd.png') !important;
+            background-repeat: no-repeat;
+            height: 24px !important;
+            width: 24px !important;
+            margin: 10px 1px;
+            display: inline-block;
+            left: 0 !important;
+            top: 0 !important;
+        }
+        
+        .openemr-calendar .ui-datepicker-prev {
+            background-image: url('https://ik.imagekit.io/zohf1gdzi/prev_Fryl7Xrnd.png') !important;
+            height: 1px !important;
+            width: 1px !important;
+            margin: 1px !important;
+        }
+        
+        .ui-datepicker-next {
+            cursor: pointer;
+        }
+        
+        .ui-datepicker-prev {
+            cursor: pointer;
+        }
+        
+        .ui-datepicker-next {
+            background-color: transparent !important;
+            background-image: url('https://ik.imagekit.io/zohf1gdzi/next_utC75Zqlvk.png') !important;
+            background-repeat: no-repeat;
+            height: 24px !important;
+            width: 24px !important;
+            margin: 10px 1px;
+            display: inline-block;
+            right: 0px !important;
+            top: 0 !important;
+        }
+        
+        .openemr-calendar .ui-datepicker-next {
+            background-image: url('https://ik.imagekit.io/zohf1gdzi/next_utC75Zqlvk.png') !important;
+            height: 1px !important;
+            width: 1px !important;
+            margin: 1px 1px;
+        }
+        
+        .ui-datepicker-month {
+            border-radius: 2px;
+            background-color: #ffffff;
+            width: 110px !important;
+            height: 22px;
+            color: rgb(0, 0, 0);
+            font-size: 16px !important;
+            font-weight: 400;
+            text-align: center !important;
+            border: none !important;
+            margin-right: 17px !important;
+            margin-top: -1px !important;
+            vertical-align: text-top;
+        }
+        
+        .openemr-calendar .ui-datepicker-month {
+            font-family: Open Sans, Arial, sans-serif;
+            color: rgba(0, 0, 0, 0.87);
+            font-size: 22px !important;
+            font-weight: 400;
+            text-align: center;
+            transform: scaleX(1.0029)
+        }
+        
+        .ui-datepicker-year {
+            border-radius: 2px;
+            background-color: #ffffff;
+            width: 61px !important;
+            height: 22px;
+            border: none !important;
+            font-family: Open Sans, Arial, sans-serif !important;
+            color: rgb(0, 0, 0);
+            font-size: 16px !important;
+            margin-top: 0px !important;
+            font-weight: 500;
+            text-align: left;
+            vertical-align: text-top;
+        }
+        
+        .openemr-calendar .ui-datepicker-year {
+            font-family: Open Sans, Arial, sans-serif !important;
+            color: rgba(34, 34, 34, 0.87);
+            font-size: 16px !important;
+            font-weight: 500;
+            text-align: center;
+            transform: scaleX(1.0029)
+        }
+        
+        .ui-datepicker-month option,
+        .ui-datepicker-year option {
+            color: #000000 !important;
+            background-color: rgb(255, 255, 255) !important;
+            font-family: Open Sans, Arial, sans-serif !important;
+            font-size: 0.9em !important;
+            font-weight: 400;
+        }
+        
+        .ui-datepicker-month option[selected],
+        .ui-datepicker-year option[selected] {
+            background-color: #bebbbb !important;
+            color: #414141 !important;
+        }
+        
+        .ui-datepicker .ui-state-hover {
+            /*background: none !important;*/
+            border: 0 !important;
+        }
+        
+        .ui-datepicker td {
+            vertical-align: top;
+        }
+        
+        .ui-datepicker .ui-state-default {
+            border-radius: 2px;
+            border-color: #edebeb !important;
+            /*     background: white !important; */
+            width: 24px;
+            height: 24px;
+            padding: 0 !important;
+            line-height: 24px;
+            text-align: center !important;
+            font-family: Open Sans, Arial, sans-serif;
+            color: #707070;
+            font-size: 13px;
+            font-weight: 400 !important;
+            margin: 7px 0 0 4px;
+        }
+        
+        .ui-datepicker .ui-state-default.ui-state-highlight {
+            border-color: #dcdcdc;
+            background-color: #cff3f8 !important;
+            color: #3e9aba !important;
+        }
+        
+        .openemr-calendar .ui-state-default {
+            font-size: 10px;
+            margin: 0;
+        }
+        
+        .ui-datepicker td {
+            width: 33px;
+        }
+        
+        .openemr-calendar .ui-datepicker td {
+            width: 26px;
+        }
+        
+        .openemr-calendar .ui-state-default {
+            width: 26px;
+            height: 20px;
+            line-height: 20px;
+        }
+        
+        .ui-state-default.ui-state-hover {
+            border-color: #dcdcdc;
+            background-color: #cff3f8 !important;
+        }
+        
+        .ui-datepicker .ui-state-active {
+            border-color: #777777;
+            background-color: #cff3f8 !important;
+            color: #000000 !important;
+        }
+        
+        .ui-datepicker-calendar thead tr th {
+            font-family: Open Sans, Arial, sans-serif;
+            color: #000000;
+            font-size: 12px;
+            font-weight: 400;
+            padding: 0.45em 0.3em !important;
+            /*   width: 15px !important; */
+        }
+        
+        .openemr-calendar .ui-datepicker-calendar thead tr th {
+            font-size: 12px;
+        }
+        
+        .ui-datepicker-close {
+            display: none;
+        }
+        
+        .ui-datepicker thead {
+            background-color: #f5f5f5;
+        }
+        
+        .openemr-calendar .ui-datepicker thead {
+            background: none;
+        }
+        
+        .ui-state-default.ui-datepicker-current {
+            float: none !important;
+            font-family: Open Sans, Arial, sans-serif;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+            border-width: 0 !important;
+            border: none;
+            vertical-align: top;
+            margin: 0 !important;
+            background-color: transparent !important;
+        }
+        
+        .ui-datepicker-buttonpane.ui-widget-content {
+            text-align: center;
+            background-color: #3e9aba;
+            margin: 0 !important;
+            height: 28px;
+            padding: 0 !important;
+        }
+        
+        .openemr-calendar .ui-datepicker-year {
+            background-color: transparent;
+        }
+        
+        .openemr-calendar .ui-datepicker-month {
+            background-color: transparent;
+        }
+        
+        .openemr-calendar .ui-state-default {
+            border: 0 !important;
+        }
+        
+        .openemr-calendar .ui-datepicker-month {
+            margin-right: 10px !important;
+        }
     </style>
 </head>
 
 <body data-spy="scroll" data-target="#navbarSupportedContent">
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" id="navbarSupportedContent">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
         <div class="container">
 
             <!-- Brand -->
             <a class="navbar-brand" href="http://texttoppt.pythonanywhere.com/">
-                <img src="https://ik.imagekit.io/zohf1gdzi/Logo_New_JAp623M741.png" class="img-fluid" alt="">
+                <img src="https://ik.imagekit.io/zohf1gdzi/Logo_New_JAp623M741.png" class="img-fluid mr-5" alt="">
             </a>
 
             <!-- Collapse -->
@@ -219,21 +540,21 @@
 
                 <!-- Left -->
                 <ul class="navbar-nav nav-pills mx-auto">
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
                         <a class="nav-link" href="#Home">Home
                   <span class="sr-only">(current)</span>
                 </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
                         <a class="nav-link" href="#About">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
                         <a class="nav-link" href="#Features">Features</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
                         <a class="nav-link" href="#Convert">Convert</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
                         <a class="nav-link" href="#aboutUs">About Us</a>
                     </li>
                 </ul>
@@ -406,7 +727,7 @@
                 <div class="row features-small mb-5 mt-3 wow fadeIn">
 
                     <!--First column-->
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-12">
                         <!--First row-->
                         <div class="row">
                             <div class="col-2">
@@ -464,13 +785,13 @@
                     <!--/First column-->
 
                     <!--Second column-->
-                    <div class="col-md-4 flex-center">
+                    <div class="col-lg-4 col-md-12 flex-center mt-5 mb-5">
                         <img src="https://ik.imagekit.io/zohf1gdzi/features-image_gCaM27x97.png" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid">
                     </div>
                     <!--/Second column-->
 
                     <!--Third column-->
-                    <div class="col-md-4 mt-2">
+                    <div class="col-lg-4 col-md-12 mt-2">
                         <!--First row-->
                         <div class="row">
                             <div class="col-2">
@@ -537,233 +858,239 @@
             <section class="mt-5 wow fadeIn">
 
                 <h2 class="my-5 h3 text-center">Convert</h2>
-                <!--Card content-->
-                <div class="card-body">
 
-                    <!-- Form -->
-                    <form name="uploadFileForm" method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        <!-- File Upload -->
-                        <div class="row container-fluid">
-                            <div class="col-md-6 input-group">
 
-                                <div class="custom-file d-flex justify-content-start mt-1">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="document" required>
-                                    <label class="custom-file-label" for="file_photo">Choose file</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6 d-flex justify-content-end">
-                                <button class="btn btn-dark buttoncolor mt-0" type="submit" onclick="validateForm()">Convert Now!</button>
+                <!-- Form -->
+                <form name="uploadFileForm" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <!-- File Upload -->
+                    <div class="row mx-auto container-fluid d-flex justify-content-between">
+                        <div class="col-lg-6 col-md-8 input-group mt-1 mb-5">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="document" required>
+                                <label class="custom-file-label" for="file_photo">Choose file</label>
                             </div>
                         </div>
-                        <!-- /File Upload -->
-                        <div class="row justify-content-md-center mt-5">
-                            <div class="col-md-4 mb-3 text-center">
-                                <!-- Author Field -->
-                                <label for="authorName"> <font size="4" face="Arial Black">Author</font></label>
-                                <input type="text" value="All" id="authorName" class="form-control mb-4" name="authorName" required>
-                                <!-- /Author Field -->
-                            </div>
-                            <div class="col-md-4 mb-3 text-center">
-                                <!-- Author Field -->
-                                <label for="startDate"> <font size="4" face="Arial Black">Start Date</font></label>
-                                <input type="text" id="startDate" value="01/01/00" placeholder="%d/%m/%m" class="form-control mb-4" name="startDate" required>
-                                <!-- /Author Field -->
-                            </div>
-                            <div class="col-md-4 mb-3 text-center">
-                                <!-- Author Field -->
-                                <label for="endDate"> <font size="4" face="Arial Black">End Date</font></label>
-                                <input type="text" id="endDate" value="01/01/68" placeholder="%d/%m/%m" class="form-control mb-4" name="endDate" required>
-                                <!-- /Author Field -->
-                            </div>
+                        <div class="col-lg-6 col-md-4 d-flex justify-content-center">
+                            <button class="btn btn-dark buttoncolor mt-0 mb-5" type="submit" onclick="validateForm()">Convert Now!</button>
                         </div>
-                        <!-- Configuration -->
-                        <div class="container mt-2">
+                        <div class="col-lg-6 col-md-12"></div>
+                    </div>
+                    <!-- /File Upload -->
+                    <div class="row justify-content-md-center mt-0">
+                        <div class="col-lg-4 col-md-4 mb-3 text-center">
+                            <!-- Author Field -->
+                            <label for="authorName" class="h4-responsive">Author</label>
+                            <input type="text" value="All" id="authorName" class="form-control mx-auto mb-4 w-50" name="authorName" required>
+                            <!-- /Author Field -->
+                        </div>
+                        <div class="col-lg-4 col-md-4 mb-3 text-center">
+                            <label for="startDate" class="h4-responsive">Start Date</label>
+                            <input type="text" id="startDate" value="01/01/19" placeholder="dd/mm/yy" class="form-control mx-auto mb-4 w-50" name="startDate" required>
 
-                            <!--First row-->
-                            <div class="row wow fadeIn">
-                                <!--First column-->
-                                <div class="col-md-12 mb-4 text-center text-md-center">
-                                    <!--/Modal-->
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-dark buttoncolor" data-toggle="modal" data-target="#centralModalInfo" id="templateSelector">
+                        </div>
+                        <div class="col-lg-4 col-md-4 mb-3 text-center">
+                            <!-- Author Field -->
+                            <label for="endDate" class="h4-responsive">End Date</label>
+                            <input type="text" id="endDate" value="31/12/19" placeholder="dd/mm/yy" class="form-control mx-auto mb-4 w-50" name="endDate" required>
+                            <!-- /Author Field -->
+                        </div>
+                    </div>
+                    <!-- Configuration -->
+                    <div class="container-fluid mt-2">
+
+                        <!--First row-->
+                        <div class="row wow fadeIn">
+                            <!--First column-->
+                            <div class="col-md-12 mb-4 text-center text-md-center">
+                                <!--/Modal-->
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-dark buttoncolor" data-toggle="modal" data-target="#centralModalInfo" id="templateSelector">
                                    Choose Template
                                     </button>
-                                    <!-- Central Modal Medium Info -->
-                                    <div class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
-                                            <!--Content-->
-                                            <div class="modal-content">
-                                                <!--Header-->
-                                                <div class="modal-header footercolor">
-                                                    <p class="heading lead">Templates</p>
+                                <!-- Central Modal Medium Info -->
+                                <div class="modal fade mt-5" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+                                        <!--Content-->
+                                        <div class="modal-content">
+                                            <!--Header-->
+                                            <div class="modal-header footercolor">
+                                                <p class="heading lead">Templates</p>
 
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true" class="white-text">&times;</span>
                                                 </button>
-                                                </div>
-
-                                                <!--Body-->
-                                                <div class="modal-body">
-                                                    <!--First row-->
-                                                    <div class="row wow fadeIn">
-                                                        <!--First column-->
-                                                        <div class="col-md-4 mb-4 text-center text-md-left">
-                                                            <!-- Card -->
-                                                            <div class="card">
-                                                                <!-- Card image -->
-                                                                <div class="view overlay">
-                                                                    <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/roundRectangle_VVCYt4On5.PNG" alt="Card image cap">
-                                                                    <a href="#!">
-                                                                        <div class="mask rgba-white-slight"></div>
-                                                                    </a>
-                                                                </div>
-
-                                                                <!-- Card content -->
-                                                                <div class="card-body text-center">
-
-                                                                    <!-- Title -->
-                                                                    <h4 class="card-title">Round Rectangle</h4>
-                                                                    <!-- Text -->
-                                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                                    <!-- Button -->
-                                                                    <button type="button" class="btn btn-dark" data-dismiss="modal" onclick="changeSpecificationFunc()" id="roundRectangleButton">Select</button>
-                                                                </div>
-                                                            </div>
-                                                            <!-- Card -->
-                                                        </div>
-                                                        <!--/.First Column-->
-                                                        <!--Second column-->
-                                                        <div class="col-md-4 mb-4 text-center text-md-left">
-                                                            <!-- Card -->
-                                                            <div class="card">
-                                                                <!-- Card image -->
-                                                                <div class="view overlay">
-                                                                    <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/curvedRibbon_HYVStiwJq4.PNG" alt="Card image cap">
-                                                                    <a href="#!">
-                                                                        <div class="mask rgba-white-slight"></div>
-                                                                    </a>
-                                                                </div>
-
-                                                                <!-- Card content -->
-                                                                <div class="card-body text-center">
-
-                                                                    <!-- Title -->
-                                                                    <h4 class="card-title">Curved Ribbon</h4>
-                                                                    <!-- Text -->
-                                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                                    <!-- Button -->
-                                                                    <button type="button" class="btn btn-dark" data-dismiss="modal" onclick="changeSpecificationFunc()" id="curvedRibbonButton">Select</button>
-                                                                </div>
-                                                            </div>
-                                                            <!-- Card -->
-                                                        </div>
-                                                        <!--/.Second Column-->
-                                                        <!--Third column-->
-                                                        <div class="col-md-4 mb-4 text-center text-md-left">
-                                                            <!-- Card -->
-                                                            <div class="card">
-                                                                <!-- Card image -->
-                                                                <div class="view overlay">
-                                                                    <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/rectangle_SdAhv9XDN.PNG" alt="Card image cap">
-                                                                    <a href="#!">
-                                                                        <div class="mask rgba-white-slight"></div>
-                                                                    </a>
-                                                                </div>
-
-                                                                <!-- Card content -->
-                                                                <div class="card-body text-center">
-
-                                                                    <!-- Title -->
-                                                                    <h4 class="card-title">Rectangle</h4>
-                                                                    <!-- Text -->
-                                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                                    <!-- Button -->
-                                                                    <button type="button" class="btn btn-dark" data-dismiss="modal" onclick="changeSpecificationFunc()" id="rectangleButton">Select</button>
-                                                                </div>
-                                                            </div>
-                                                            <!-- Card -->
-                                                        </div>
-                                                        <!--/.Third Column-->
-                                                    </div>
-                                                    <!--/.First Row-->
-                                                </div>
-                                                <!--/.Body-->
                                             </div>
-                                            <!--/.Content-->
+                                            <!--Body-->
+                                            <div class="modal-body">
+                                                <!-- Container -->
+                                                <div class="container">
+                                                    <div class="owl-carousel template-carousel owl-loaded">
+                                                        <div class="owl-stage-outer">
+                                                            <div class="owl-stage mt-3 mb-3">
+                                                                <div class="owl-item">
+                                                                    <!-- Card -->
+                                                                    <div class="card z-depth-0">
+                                                                        <!-- Card image -->
+                                                                        <div class="">
+                                                                            <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/roundRectangle_VVCYt4On5.PNG" alt="Card image cap">
+                                                                            <a href="#!">
+
+                                                                            </a>
+                                                                        </div>
+
+                                                                        <!-- Card content -->
+                                                                        <div class="card-body text-center">
+
+                                                                            <!-- Title -->
+                                                                            <h4 class="card-title h4-responsive">Round Rectangle</h4>
+                                                                            <!-- Text -->
+                                                                            <p class="card-text"></p>
+                                                                            <!-- Button -->
+                                                                            <button type="button" class="btn btn-dark" data-dismiss="modal" onclick="changeSpecificationFunc()" id="roundRectangleButton">Select</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Card -->
+                                                                </div>
+                                                                <div class="owl-item">
+                                                                    <!-- Card -->
+                                                                    <div class="card z-depth-0">
+                                                                        <!-- Card image -->
+                                                                        <div class="">
+                                                                            <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/curvedRibbon_HYVStiwJq4.PNG" alt="Card image cap">
+                                                                            <a href="#!">
+
+                                                                            </a>
+                                                                        </div>
+
+                                                                        <!-- Card content -->
+                                                                        <div class="card-body text-center">
+
+                                                                            <!-- Title -->
+                                                                            <h4 class="card-title h4-responsive">Curved Ribbon</h4>
+                                                                            <!-- Text -->
+                                                                            <p class="card-text"></p>
+                                                                            <!-- Button -->
+                                                                            <button type="button" class="btn btn-dark" data-dismiss="modal" onclick="changeSpecificationFunc()" id="curvedRibbonButton">Select</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Card -->
+                                                                </div>
+                                                                <div class="owl-item">
+                                                                    <!-- Card -->
+                                                                    <div class="card z-depth-0">
+                                                                        <!-- Card image -->
+                                                                        <div class="">
+                                                                            <img class="card-img-top" src="https://ik.imagekit.io/zohf1gdzi/rectangle_SdAhv9XDN.PNG" alt="Card image cap">
+                                                                            <a href="#!">
+
+                                                                            </a>
+                                                                        </div>
+
+                                                                        <!-- Card content -->
+                                                                        <div class="card-body text-center">
+
+                                                                            <!-- Title -->
+                                                                            <h4 class="card-title h4-responsive">Rectangle</h4>
+                                                                            <!-- Text -->
+                                                                            <p class="card-text"></p>
+                                                                            <!-- Button -->
+                                                                            <button type="button" class="btn btn-dark" data-dismiss="modal" onclick="changeSpecificationFunc()" id="rectangleButton">Select</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Card -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="owl-nav d-flex justify-content-center mt-3 mb-3">
+                                                            <div class="templatePrev w-50"><i class="fa fa-chevron-left fa-2x iconcolor"></i></div>
+                                                            <h2 class="h2-responsive iconcolor font-weight-bold">|</h2>
+                                                            <div class="templateNext w-50"><i class="fa fa-chevron-right fa-2x iconcolor"></i></div>
+                                                        </div>
+                                                        <div class="owl-dots">
+                                                            <div class="owl-dot active"></div>
+                                                            <div class="owl-dot"></div>
+                                                            <div class="owl-dot"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- !Container -->
+                                            </div>
+                                            <!--/.Body-->
                                         </div>
+                                        <!--/.Content-->
                                     </div>
-                                    <!-- Central Modal Medium Info-->
-                                    <!--/Modal-->
                                 </div>
+                                <!-- Central Modal Medium Info-->
+                                <!--/Modal-->
                             </div>
-                            <!--/First row-->
-                            <!-- Collapsible element -->
-                            <div class="container" id="hiddenConfig" style="display: none;">
-                                <!--Second row-->
-                                <div class="row wow fadeIn justify-content-md-center">
-                                    <div class="col-md-4 mb-4 text-center">
-                                        <!-- Shape Field -->
-                                        <label for="shapeSelect">Shape Type</label>
-                                        <select name="shapeType" class="custom-select" id="shapeSelect">
+                        </div>
+                        <!--/First row-->
+                        <!-- Collapsible element -->
+                        <div class="container" id="hiddenConfig" style="display: none;">
+                            <!--Second row-->
+                            <div class="row wow fadeIn justify-content-md-center">
+                                <div class="col-md-4 mb-4 mx-auto w-50 text-center">
+                                    <!-- Shape Field -->
+                                    <label for="shapeSelect">Shape Type</label>
+                                    <select name="shapeType" class="custom-select" id="shapeSelect">
                                             <option value="rectangle">Rectangle</option>
                                             <option value="round rectangle">Round Rectangle</option>
                                             <option value="curved ribbon">Curved Ribbon</option>
                                             </select>
-                                        <!-- /Shape Field -->
-                                    </div>
-                                    <!--Third column-->
-                                    <div class="col-md-4 mb-4 text-center">
-                                        <!-- Font Field -->
-                                        <label for="fontSize">Font Size</label>
-                                        <input type="text" id="fontSize" class="form-control mb-4" name="fontSize" required>
-                                        <!-- /Font Field -->
-                                    </div>
+                                    <!-- /Shape Field -->
                                 </div>
-                                <!--/Second row-->
-                                <!--Third row-->
-                                <div class="row wow fadeIn">
-                                    <!--Firstcolumn-->
-                                    <div class="col-md-3 mb-4 text-center text-md-left">
-                                        <!-- Left Field -->
-                                        <label for="Left">Left</label>
-                                        <input type="text" id="Left" class="form-control mb-4" name="Left" required>
-                                        <!-- /Left Field -->
-                                        <!--Second column-->
-                                    </div>
-                                    <div class="col-md-3 mb-4 text-center text-md-left">
-                                        <!-- Top Field -->
-                                        <label for="Top">Top</label>
-                                        <input type="text" id="Top" class="form-control mb-4" name="Top" required>
-                                        <!-- /Top Field -->
-                                    </div>
-                                    <!--Third column-->
-                                    <div class="col-md-3 mb-4 text-center text-md-left">
-                                        <!-- Height Field -->
-                                        <label for="Height">Height</label>
-                                        <input type="text" id="Height" class="form-control mb-4" name="Height" required>
-                                        <!-- /Height Field -->
-                                    </div>
-                                    <!--Fourth column-->
-                                    <div class="col-md-3 mb-4 text-center text-md-left">
-                                        <!-- Width Field -->
-                                        <label for="Width">Width</label>
-                                        <input type="text" id="Width" class="form-control mb-4" name="Width" required>
-                                        <!-- /Width Field -->
-                                    </div>
+                                <!--Third column-->
+                                <div class="col-md-4 mb-4 mx-auto w-50 text-center">
+                                    <!-- Font Field -->
+                                    <label for="fontSize">Font Size</label>
+                                    <input type="text" id="fontSize" class="form-control mb-4" name="fontSize" required>
+                                    <!-- /Font Field -->
                                 </div>
-                                <!--/Third row-->
                             </div>
-                            <!-- Collapsible element -->
+                            <!--/Second row-->
+                            <!--Third row-->
+                            <div class="row wow fadeIn">
+                                <!--Firstcolumn-->
+                                <div class="col-md-3 mb-4 mx-auto w-50 text-center text-md-left">
+                                    <!-- Left Field -->
+                                    <label for="Left">Left</label>
+                                    <input type="text" id="Left" class="form-control mb-4" name="Left" required>
+                                    <!-- /Left Field -->
+                                    <!--Second column-->
+                                </div>
+                                <div class="col-md-3 mb-4 mx-auto w-50 text-center text-md-left">
+                                    <!-- Top Field -->
+                                    <label for="Top">Top</label>
+                                    <input type="text" id="Top" class="form-control mb-4" name="Top" required>
+                                    <!-- /Top Field -->
+                                </div>
+                                <!--Third column-->
+                                <div class="col-md-3 mb-4 mx-auto w-50 text-center text-md-left">
+                                    <!-- Height Field -->
+                                    <label for="Height">Height</label>
+                                    <input type="text" id="Height" class="form-control mb-4" name="Height" required>
+                                    <!-- /Height Field -->
+                                </div>
+                                <!--Fourth column-->
+                                <div class="col-md-3 mb-4 mx-auto w-50 text-center text-md-left">
+                                    <!-- Width Field -->
+                                    <label for="Width">Width</label>
+                                    <input type="text" id="Width" class="form-control mb-4" name="Width" required>
+                                    <!-- /Width Field -->
+                                </div>
+                            </div>
+                            <!--/Third row-->
                         </div>
-                        <!-- /Configuration -->
-                        <div class="row justify-content-md-center">
-                            <button class="btn btn-dark buttoncolor" type="submit" onclick="validateForm()">Convert</button>
-                        </div>
-                    </form>
-                    <!-- Form -->
-                </div>
-                <!--/.Card Content-->
+                        <!-- Collapsible element -->
+                    </div>
+                    <!-- /Configuration -->
+                    <div class="row justify-content-md-center">
+                        <button class="btn btn-dark buttoncolor mx-auto" type="submit" onclick="validateForm()">Convert</button>
+                    </div>
+                </form>
+                <!-- Form -->
+
             </section>
             <!--Section: Upload Files-->
             <hr class="my-5">
@@ -781,325 +1108,284 @@
                 <div class="container-fluid mt-5">
                     <!-- Container -->
                     <div class="container">
-                        <!--Carousel Wrapper-->
-                        <div class="container wow fadeIn">
-                            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-                                <!--Controls-->
-                                <div class="controls-top text-center mb-2 wow bounceInDown" data-wow-delay="0.25s">
-                                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-circle-left black-text fa-3x"></i></a>
-                                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-circle-right black-text fa-3x"></i></a>
-                                </div>
-                                <!--/.Controls-->
-
-                                <!--Indicators-->
-                                <ol class="carousel-indicators wow bounceInUp" data-wow-delay="0.6s">
-                                    <li data-target="#multi-item-example" data-slide-to="0" class="active "></li>
-                                    <li data-target="#multi-item-example" data-slide-to="1" class=""></li>
-                                    <li data-target="#multi-item-example" data-slide-to="2" class=""></li>
-                                </ol>
-                                <!--/.Indicators-->
-
-                                <!--Slides-->
-                                <div class="carousel-inner container" role="listbox">
-
-                                    <!--First slide-->
-                                    <div class="carousel-item active">
-
-                                        <div class="row mb-2 mt-2">
-                                            <div class="col-md-4">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half wow fadeInUp" data-wow-delay="">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/jatinAvatar_y2hhzv-Va.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Jatin Shrivastava</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <p class="grey-text mb-0 font-weight-bold">Highly independent and self motivated person. Always eager to learn something new. Goal oriented, determined and focused. </p>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- Facebook -->
-                                                            <a href="https://twitter.com/jatin__808" class="p-2 fa-lg fb-ic" target="_blank">
-                                                                <i class="fab fa-facebook-f facebook-dark-hover"></i>
-                                                            </a>
-                                                            <!-- Twitter -->
-                                                            <a href="https://twitter.com/jatin__808" class="p-2 fa-lg tw-ic" target="_blank">
-                                                                <i class="fab fa-twitter twitter-dark-hover"></i>
-                                                            </a>
-                                                            <!-- LinkedIn -->
-                                                            <a href="https://www.linkedin.com/in/jatin-shrivastava" class="p-2 fa-lg li-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half wow fadeInUp" data-wow-delay="0.25s">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/sumitAvatar_zViRpk6N3.jpeg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Sumit Raj</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student. Worked on various web projects using bootstrap and also currently developing projects based on ios and java. </p>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- LinkedIn -->
-                                                            <a href="https://www.linkedin.com/in/sumit-raj-459553177/" class="p-2 fa-lg ins-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half wow fadeInUp" data-wow-delay="0.5s">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/suryanshpandey_wEQKXmP8vS.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Suryansh Pandey</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <p class="grey-text mb-0 font-weight-bold">Pursuing B.Tech. Proficient in logic formation. Keen to learn new technologies. Optimistic and rich in self-confidence.</p>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- LinkedIn -->
-                                                            <a href="https://www.linkedin.com/in/suryansh-pandey-1104b3157/" class="p-2 fa-lg ins-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!--/.First slide-->
-
-                                    <!--Second slide-->
-                                    <div class="carousel-item">
-
-                                        <div class="row mb-2 mt-2">
-                                            <div class="col-md-4">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/manjeershrivastav_itt3MpZp5.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Manjeer Shrivastav</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <br>
-                                                        <br>
-                                                        <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
-                                                        <br>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- LinkedIn -->
-                                                            <a href="https://www.linkedin.com/in/manjeer-shrivastav-4aa2b117b/" class="p-2 fa-lg ins-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/sumitkumar_pG-gHj6c-.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Sumit Kumar</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <br>
-                                                        <br>
-                                                        <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
-                                                        <br>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- LinkedIn -->
-                                                            <a href="https://www.linkedin.com/in/sumit-kumar-0844b8180/" class="p-2 fa-lg ins-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/prateeksinha_zhAVwN7tA.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Prateek Sinha</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <br>
-                                                        <br>
-                                                        <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
-                                                        <br>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- LinkedIn -->
-                                                            <a href="http://www.linkedin.com/in/prateek-sinha-8073a1145" class="p-2 fa-lg ins-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!--/.Second slide-->
-
-                                    <!--Third slide-->
-                                    <div class="carousel-item">
-
-                                        <div class="row mb-2 mt-2">
-                                            <div class="col-md-4">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/shubhamthakur_46A1h5uKe.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Shubham Kumar Thakur</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <br>
-                                                        <br>
-                                                        <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
-                                                        <br>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- LinkedIn -->
-                                                            <a href="https://www.linkedin.com/in/shubham-kumar-thakur-391b80179/" class="p-2 fa-lg ins-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/aryanraj_ICpdGnkNe.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Aryan Raj</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <br>
-                                                        <br>
-                                                        <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
-                                                        <br>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- LinkedIn -->
-                                                            <a href="https://www.linkedin.com/in/aryan-raj-58b0b789" class="p-2 fa-lg ins-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-                                            </div>
-
-                                            <div class="col-md-4 clearfix d-none d-md-block">
-                                                <!--Card Primary-->
-                                                <div class="card text-center z-depth-1-half">
-                                                    <div class="card-body mb-5">
-                                                        <!--Avatar-->
-                                                        <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/pratikshashahi_r_G4rH7w8.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
-                                                        </div>
-                                                        <br>
-                                                        <h5 class="card-title black-text">Pratiksha Shahi</h5>
-                                                        <h6 class="font-italic grey-text">Developer</h6>
-                                                        <br>
-                                                        <br>
-                                                        <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
-                                                        <br>
-                                                        <br>
-                                                        <ul class="list-unstyled mb-0">
-                                                            <!-- LinkedIn -->
-                                                            <a href="https://www.linkedin.com/in/p%C5%99%C3%A2%C5%A5%C3%AE%C4%B7sha-shahi-5b1054119/" class="p-2 fa-lg ins-ic" target="_blank">
-                                                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                                                            </a>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--/.Card Primary-->
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!--/.Third slide-->
-                                    <br>
-                                    <br>
-                                </div>
-                                <!--/.Slides-->
+                        <div class="owl-carousel developerCarousel owl-loaded text-center">
+                            <div class="owl-nav mt-3 mb-3 w-25 mx-auto d-flex justify-content-around wow bounceInDown" data-wow-delay="0.25s">
+                                <div class="dev-prev w-0"><i class="fas fa-chevron-circle-left black-text fa-3x"></i></div>
+                                <div class="dev-next w-0"><i class="fas fa-chevron-circle-right black-text fa-3x"></i></div>
                             </div>
-                            <!--/.Carousel Wrapper-->
+                            <div class="owl-stage-outer container">
+                                <div class="owl-stage developer-stage  mt-3">
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half wow fadeInUp mb-5" data-wow-delay="">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/jatinAvatar_y2hhzv-Va.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Jatin Shrivastava</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <p class="grey-text mb-0 font-weight-bold">Highly independent and self motivated person. Always eager to learn something new. Goal oriented, determined and focused. </p>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- Facebook -->
+                                                    <a href="https://twitter.com/jatin__808" class="p-2 fa-lg fb-ic" target="_blank">
+                                                        <i class="fab fa-facebook-f facebook-dark-hover"></i>
+                                                    </a>
+                                                    <!-- Twitter -->
+                                                    <a href="https://twitter.com/jatin__808" class="p-2 fa-lg tw-ic" target="_blank">
+                                                        <i class="fab fa-twitter twitter-dark-hover"></i>
+                                                    </a>
+                                                    <!-- LinkedIn -->
+                                                    <a href="https://www.linkedin.com/in/jatin-shrivastava" class="p-2 fa-lg li-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half wow fadeInUp mb-5" data-wow-delay="0.25s">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/sumitAvatar_zViRpk6N3.jpeg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Sumit Raj</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student. Worked on various web projects using bootstrap and also currently developing projects based on ios and java. </p>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- LinkedIn -->
+                                                    <a href="https://www.linkedin.com/in/sumit-raj-459553177/" class="p-2 fa-lg ins-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half wow fadeInUp mb-5" data-wow-delay="0.5s">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/suryanshpandey_wEQKXmP8vS.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Suryansh Pandey</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <p class="grey-text mb-0 font-weight-bold">Pursuing B.Tech. Proficient in logic formation. Keen to learn new technologies. Optimistic and rich in self-confidence.</p>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- LinkedIn -->
+                                                    <a href="https://www.linkedin.com/in/suryansh-pandey-1104b3157/" class="p-2 fa-lg ins-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half mb-5">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/manjeershrivastav_itt3MpZp5.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Manjeer Shrivastav</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <br>
+                                                <br>
+                                                <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
+                                                <br>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- LinkedIn -->
+                                                    <a href="https://www.linkedin.com/in/manjeer-shrivastav-4aa2b117b/" class="p-2 fa-lg ins-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half mb-5">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/sumitkumar_pG-gHj6c-.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Sumit Kumar</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <br>
+                                                <br>
+                                                <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
+                                                <br>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- LinkedIn -->
+                                                    <a href="https://www.linkedin.com/in/sumit-kumar-0844b8180/" class="p-2 fa-lg ins-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half mb-5">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/prateeksinha_zhAVwN7tA.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Prateek Sinha</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <br>
+                                                <br>
+                                                <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
+                                                <br>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- LinkedIn -->
+                                                    <a href="http://www.linkedin.com/in/prateek-sinha-8073a1145" class="p-2 fa-lg ins-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half mb-5">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/shubhamthakur_46A1h5uKe.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Shubham Kumar Thakur</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <br>
+                                                <br>
+                                                <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
+                                                <br>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- LinkedIn -->
+                                                    <a href="https://www.linkedin.com/in/shubham-kumar-thakur-391b80179/" class="p-2 fa-lg ins-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half mb-5">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/aryanraj_ICpdGnkNe.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Aryan Raj</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <br>
+                                                <br>
+                                                <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
+                                                <br>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- LinkedIn -->
+                                                    <a href="https://www.linkedin.com/in/aryan-raj-58b0b789" class="p-2 fa-lg ins-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                    <div class="owl-item">
+                                        <!--Card Primary-->
+                                        <div class="card dev-card text-center z-depth-1-half mb-5">
+                                            <div class="card-body mb-5">
+                                                <!--Avatar-->
+                                                <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/pratikshashahi_r_G4rH7w8.jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
+                                                </div>
+                                                <br>
+                                                <h5 class="card-title black-text">Pratiksha Shahi</h5>
+                                                <h6 class="font-italic grey-text">Developer</h6>
+                                                <br>
+                                                <br>
+                                                <p class="grey-text mb-0 font-weight-bold">Currently a C.S.E student.</p>
+                                                <br>
+                                                <br>
+                                                <ul class="list-unstyled mb-0">
+                                                    <!-- LinkedIn -->
+                                                    <a href="https://www.linkedin.com/in/p%C5%99%C3%A2%C5%A5%C3%AE%C4%B7sha-shahi-5b1054119/" class="p-2 fa-lg ins-ic" target="_blank">
+                                                        <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
+                                                    </a>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.Card Primary-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-dots">
+                                <div class="owl-dot active"></div>
+                                <div class="owl-dot"></div>
+                                <div class="owl-dot"></div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <br>
                 <hr class="my-5">
+                <br>
+                <br>
                 <!--Grid row-->
                 <div class="row">
 
                     <!--Grid column-->
-                    <div class="col-md-6 mb-4 align-middle">
+                    <div class="col-md-6 mb-4 mt-3 text-center">
                         <div class="avatar mx-auto whited w-50"><img src="https://ik.imagekit.io/zohf1gdzi/mraashish_ZvA93BLs_.png" alt="avatar mx-auto white" class="rounded-circle img-fluid z-depth-1-half">
                         </div>
                     </div>
                     <!--Grid column-->
 
                     <!--Grid column-->
-                    <div class="col-md-6 mb-4 align-middle">
-                        <br><br>
-                        <!-- Main heading -->
-                        <p class="h4 mb-3 ">Aashish Agarwal
-                            <br> <span class="h5 font-weight-bold grey-text">Mentor</span>
-                        </p>
-                        <p>Developer, Mentor and a Coach. Serving IT industry since
-                            <strong>1997</strong>.</p>
+                    <div class="col-md-6 mb-4 mt-4">
+                        <div class="container tect-center">
+                            <br>
+                            <!-- Main heading -->
+                            <p class="h4 mb-3">Aashish Agarwal
+                                <br> <span class="h5 font-weight-bold grey-text">Mentor</span>
+                            </p>
+                            <p>Developer, Mentor and a Coach. Serving IT industry since
+                                <strong>1997</strong>.</p>
 
-                        <!-- Main heading -->
+                            <!-- Main heading -->
 
-                        <ul class="list-unstyled mb-0 text-left mt-5">
+                            <ul class="list-unstyled mb-0 text-left mt-5">
 
-                            <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/in/aasish/" class="p-2 fa-lg ins-ic" target="_blank">
-                                <i class="fab fa-linkedin-in linkedin-dark-hover"></i>
-                            </a>
-                        </ul>
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/aasish/" class="p-2 fa-lg ins-ic" target="_blank">
+                                    <i class="fab fa-linkedin-in linkedin-dark-hover mt-0"></i>
+                                </a>
+                            </ul>
+                        </div>
                     </div>
                     <!--Grid column-->
 
@@ -1126,16 +1412,16 @@
                 <i class="fab fa-twitter mr-3 twitter-light-hover fa-2x"></i>
             </a>
 
-            <a href="https://www.youtube.com/channel/UCn_PJjIgEaRkeou_JIL4I8Q" target="_blank ">
-                <i class="fab fa-youtube mr-3 youtube-light-hover fa-2x "></i>
+            <a href="https://www.youtube.com/channel/UCn_PJjIgEaRkeou_JIL4I8Q" target="_blank">
+                <i class="fab fa-youtube mr-3 youtube-light-hover fa-2x"></i>
             </a>
 
-            <a href="https://github.com/jatinshrivastava/TextToPPTWeb" target="_blank ">
-                <i class="fab fa-github mr-3 github-light-hover fa-2x "></i>
+            <a href="https://github.com/jatinshrivastava/TextToPPTWeb" target="_blank">
+                <i class="fab fa-github mr-3 github-light-hover fa-2x"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/infini-learn-892493170/" target="_blank ">
-                <i class="fab fa-linkedin mr-3 linkedin-light-hover fa-2x "></i>
+            <a href="https://www.linkedin.com/in/infini-learn-892493170/" target="_blank">
+                <i class="fab fa-linkedin mr-3 linkedin-light-hover fa-2x"></i>
             </a>
         </div>
         <!-- Social icons -->
@@ -1143,28 +1429,117 @@
 
 
         <!--Copyright-->
-        <div class="footer-copyright py-3 ">
-            © 2019 Copyright: TextToPPT, &nbspan <a href="http://home.infinilearn.org/ " target="_blank ">InfiniLearn</a> initiative.
+        <div class="footer-copyright py-3">
+            © 2019 Copyright: TextToPPT, &nbspan <a href="http://home.infinilearn.org/" target="_blank">InfiniLearn</a> initiative.
         </div>
         <!--/.Copyright-->
 
         <!-- jQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <!-- Popper.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js "></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 
         <!-- Bootstrap -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js "></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
         <!-- Material Design for Bootstrap -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/js/mdb.min.js "></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
+
+        <!-- Carousel -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
         <script>
             new WOW().init();
             $('body').scrollspy({
                 target: '#navbarSupportedContent'
             })
+
+            $(document).ready(function() {
+                var owl = $('.template-carousel');
+                owl.owlCarousel({
+                    loop: true,
+                    dots: true,
+                    margin: 0,
+                    autoHeight: true,
+                    responsiveClass: true,
+                    responsive: {
+                        0: {
+                            items: 1,
+                        },
+                        600: {
+                            items: 1,
+                        },
+                        1000: {
+                            items: 3,
+                        }
+                    },
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true
+                })
+                $('.templateNext').click(function() {
+                        owl.trigger('next.owl.carousel');
+                    })
+                    // Go to the previous item
+                $('.templatePrev').click(function() {
+                    // With optional speed parameter
+                    // Parameters has to be in square bracket '[]'
+                    owl.trigger('prev.owl.carousel');
+                })
+
+
+                var devOwl = $('.developerCarousel');
+                devOwl.owlCarousel({
+                    nav: false,
+                    loop: true,
+                    dots: true,
+                    stagePadding: 0,
+                    autoplayHoverPause: true,
+                    margin: 5,
+                    autoHeight: true,
+                    responsiveClass: true,
+                    responsive: {
+                        0: {
+                            items: 1,
+                        },
+                        600: {
+                            items: 1,
+                        },
+                        1000: {
+                            items: 3,
+                        }
+                    },
+                    autoPlay: true
+                })
+                $('.dev-next').click(function() {
+                        devOwl.trigger('next.owl.carousel');
+                    })
+                    // Go to the previous item
+                $('.dev-prev').click(function() {
+                    // With optional speed parameter
+                    // Parameters has to be in square bracket '[]'
+                    devOwl.trigger('prev.owl.carousel');
+                })
+
+                jQuery(window).scroll(function() {
+                    var y_scroll_pos = window.pageYOffset;
+                    var scroll_pos_test = 2500;
+
+                    if (y_scroll_pos > scroll_pos_test) {
+                        devOwl.trigger('play.owl.autoplay', )
+                    } else {
+                        devOwl.trigger('stop.owl.autoplay', )
+                    }
+                });
+            });
+
+
+
             var buttonCicked = false;
 
             function validateForm() {
@@ -1172,7 +1547,7 @@
                 if (buttonCicked == false) {
                     changeSpecificationFunc();
                     document.getElementById("shapeSelect").value = "round rectangle";
-                    /*document.getElementById("templateSelector ").innerHTML = "Template Selected! ";*/
+                    /*document.getElementById("templateSelector").innerHTML ="Template Selected!";*/
                 }
 
             }
@@ -1196,9 +1571,9 @@
                 document.getElementById("shapeSelect").value = "round rectangle";
                 document.getElementById("templateSelector").innerHTML = "Template Selected!";
                 $("#hiddenConfig").slideDown(700);
-                $('html, body').animate({
+                /*   $('html, body').animate({
                     scrollTop: 2045
-                }, 400);
+                }, 400); */
             }
 
             curvedRibbon.onclick = function() {
@@ -1206,9 +1581,6 @@
                 document.getElementById("shapeSelect").value = "curved ribbon";
                 document.getElementById("templateSelector").innerHTML = "Template Selected!";
                 $("#hiddenConfig").slideDown(700);
-                $('html, body').animate({
-                    scrollTop: 2045
-                }, 400);
             }
 
             rectangle.onclick = function() {
@@ -1216,17 +1588,25 @@
                 document.getElementById("shapeSelect").value = "rectangle";
                 document.getElementById("templateSelector").innerHTML = "Template Selected!";
                 $("#hiddenConfig").slideDown(700);
-                $('html, body').animate({
-                    scrollTop: 2045
-                }, 400);
             }
 
-            $('datepicker').pickadate({
-                format: 'You selecte!d: dddd, dd mmm, yyyy',
-                formatSubmit: 'yyyy/mm/dd',
-                hiddenPrefix: 'prefix__',
-                hiddenSuffix: '__suffix'
-            })
+            $(function() {
+                $("#startDate").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    dateFormat: 'dd/mm/y',
+                    yearRange: "c-5:c",
+                });
+
+                $("#endDate").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    dateFormat: 'dd/mm/y',
+                    yearRange: "c-5:c",
+                });
+
+
+            });
         </script>
 </body>
 
